@@ -29,6 +29,10 @@ body {
     height: 40px;
     border-radius: 50%;
     margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+.profile img:hover{
+    background-color:rgb(127, 136, 136);
 }
 
 .userheader-left{
@@ -39,9 +43,20 @@ body {
     width: 25px;
     height: 25px;
 }
+.userheader-right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+/* Hover Effect */
+.userheader-right >img  {
+    transform: scale(1.2); /* Increase the size of the icon */
+    filter: brightness(1.5); /* Increase brightness on hover */
+}
 .userheader-right>img{
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
 }
 #user-list{
     
@@ -54,6 +69,11 @@ body {
     padding: 10px;
     cursor: pointer;
     border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+}
+/* Hover Effect on Div (BG Change) */
+.user-item:hover {
+    background-color:rgb(204, 205, 205);  /* Make the div semi-transparent when hovered */
 }
 .user-item img {
     width: 40px;
@@ -79,7 +99,12 @@ body {
     height: 25px;
     border-radius: 50%;
     margin-right: 10px;
+    transition: background-color 0.3s ease;
 }
+#chat-header img:hover{
+    background-color:rgb(127, 136, 136);
+}
+
 .chat-header-left {
     display: flex;
     align-items: center;
@@ -112,7 +137,13 @@ body {
     padding:10px;
     width: 25px;
     height: 25px;
+    transition: background-color 0.3s ease;
 }
+/* Hover Effect on Div (BG Change) */
+.chat-input>img:hover {
+    background-color:rgb(192, 193, 193);  /* Make the div semi-transparent when hovered */
+}
+
 #chat-box {
     flex: 1;
     padding: 10px;
