@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.sidebar {
+    width: 25%;
+    background: #f0f0f0;
+    padding: 10px;
+    overflow-y: auto;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: #075e54;
+    color: white;
+}
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.userheader-left{
+    display: flex;
+    align-items: center;
+}
+.profile >img{
+    width: 25px;
+    height: 25px;
+}
+#user-list{
+    
+    padding:0;
+}
+.user-item {
+   
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+.user-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.chat-area {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+#chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #075e54;
+    color: white;
+    padding: 15px;
+}
+#chat-header img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.chat-header-left {
+    display: flex;
+    align-items: center;
+}
+.chat-header-right {
+    cursor: pointer;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background: #fff;
+}
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.chat-input button {
+    margin-left: 10px;
+    padding: 10px;
+    background: #128c7e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#chat-box {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background: #e5ddd5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.message {
+    background: #dcf8c6;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    max-width: fit-content;
+    display: block; /* Stacks vertically */
+    text-align: right;  /* Right-aligns text in the message */
+    margin-left: auto;  /* Pushes message to the right side */
+}
+
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Web Clone</title>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile">
+                <div class="userheader-left">
+                <img src="imgs/main.jpg" alt="Profile Pic">
+                <span>Shubha</span></div>
+                <img src="imgs/threedots_icon.png"/>
+            </div>
+            <ul id="user-list"></ul>
+        </div>
+        <div class="chat-area">
+            <div id="chat-header">
+                <div class="chat-header-left">
+                    <img id="chat-user-pic" src="" alt="User Pic">
+                    <span id="chat-user-name">Select a user</span>
+                </div>
+                <!-- <div class="chat-header-right">⋮</div> -->
+                 <img src="imgs\threedots_icon.png" width="5px" height="5px"/>
+            </div>
+            <div id="chat-box"></div>
+            <div class="chat-input">
+                <input type="text" id="message-input" placeholder="Type a message...">
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js">
+       </script>
+    
+</body>
+</html>
