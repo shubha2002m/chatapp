@@ -19,7 +19,7 @@ jobs:
           git config --global user.email "actions@github.com"
 
       - name: Add Azure repository as a remote
-        run: git remote add azure https://mshubhashree:${{ secrets.AZURE_PAT }}@dev.azure.com/chatapppipelinetask/chatapp/_git/chatapp
+        run: git remote add azure https://mshubhashree:${{ secrets.AZURE_PAT }}@dev.azure.com/chatapppipelinetask/chatapp%28CICD%29/_git/chatapp%28CICD%29
        
 
       - name: Fetch latest changes from Azure
