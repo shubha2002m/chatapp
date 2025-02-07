@@ -3,7 +3,7 @@ name: Sync to Azure Repo
 on:
   push:
     branches:
-      - main  # Trigger on push to the main branch (change to your branch if needed)
+      - main  # Trigger this workflow on push to the main branch
 
 jobs:
   sync:
@@ -19,14 +19,16 @@ jobs:
           git config --global user.email "actions@github.com"
 
       - name: Add Azure repository as a remote
-        run: git remote add azure https://mshubhashree:${{ secrets.AZURE_PAT }}@dev.azure.com/chatapppipelinetask/chatapp%28CICD%29/_git/chatapp%28CICD%29
-       
+        run: |
+          git remote add azure https://mshubhashree:${{ secrets.AZURE_PAT }}@dev.azure.com/chatapppipelinetask/chatapp%28CICD%29/_git/chatapp%28CICD%29
 
       - name: Fetch latest changes from Azure
         run: git fetch azure
 
-      - name: Merge changes from GitHub to Azure
+      - name: Merge remote changes
         run: |
-          git checkout main  # Or change to your branch
-          git merge origin/main
-          git push azure main
+          git checkout main
+          git pull azure main --rebase || git merge azure/main  # Try rebase first, fallback to merge if necessary
+
+      - name: Push changes to Azure
+        run: git push azure main
